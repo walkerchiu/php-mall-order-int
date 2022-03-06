@@ -1,0 +1,49 @@
+{
+    "name": "walkerchiu/php-mall-order-int",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core-int": "^1.0",
+        "walkerchiu/php-morph-address-int": "^1.0",
+        "walkerchiu/php-morph-comment-int": "^1.0",
+        "walkerchiu/php-morph-image-int": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-mall-cart-int": "^1.0",
+        "walkerchiu/php-mall-shelf-int": "^1.0",
+        "walkerchiu/php-payment-int": "^1.0",
+        "walkerchiu/php-point-int": "^1.0",
+        "walkerchiu/php-shipment-int": "^1.0",
+        "walkerchiu/php-site-int": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\MallOrder\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\MallOrder\\MallOrderServiceProvider"
+            ],
+            "aliases": {
+                "Order":  "WalkerChiu\\MallOrder\\Models\\Entities\\Order",
+                "Review": "WalkerChiu\\MallOrder\\Models\\Entities\\Review"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
